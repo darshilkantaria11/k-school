@@ -1,10 +1,11 @@
 import ApplicationForm from '../../nopage/career/career3'; // Adjust the import path
 
-export default function Page({ params }) {
+export default async function Page({ params }) {
+  const param = await params;
   return (
     <>
      
-      <ApplicationForm initialRole={params.slug} /> {/* Pass the slug as initialRole */}
+      <ApplicationForm initialRole={param.slug} /> {/* Pass the slug as initialRole */}
     </>
   );
 }
