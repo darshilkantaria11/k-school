@@ -73,7 +73,7 @@ const BookATourForm = () => {
         {/* Grid for Name, Email, and Mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Parent's Name *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">Parent&apos;s Name *</label>
             <input
               type="text"
               name="parentName"
