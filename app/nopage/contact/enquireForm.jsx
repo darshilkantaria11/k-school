@@ -89,7 +89,7 @@ const EnquireForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-lg font-medium text-gray-700 mb-2">
-              Parent's Name *
+              Parent&apos;s Name *
             </label>
             <input
               type="text"
