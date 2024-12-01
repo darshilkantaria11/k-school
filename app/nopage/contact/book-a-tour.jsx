@@ -67,7 +67,7 @@ const BookATourForm = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 lv">
+    <div className="max-w-4xl mx-auto px-4 py-12 lv text-start">
       <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Book a Tour</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Grid for Name, Email, and Mobile */}
