@@ -7,7 +7,7 @@ export default function Page(){
         <>
         <Career1/>
         <Career2/>
-        <Career3/>
+        {/* <Career3/> */}
         </>
     )
 }
