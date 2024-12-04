@@ -15,7 +15,7 @@ const ApplicationForm = ({ initialRole }) => {
   });
 
   // Use a ref to access the file input
-  const [resumeName, setResumeName] = useState(''); // State to hold the resume name
+  const [resumeName, setResumeName] = useState('');
   const fileInputRef = useRef(null);
   
   const handleInputChange = (e) => {
@@ -26,8 +26,18 @@ const ApplicationForm = ({ initialRole }) => {
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setFormData({ ...formData, resume: file });
-      setResumeName(file.name); // Set the resume name
+      const reader = new FileReader();
+      reader.onload = (evt) => {
+        const fileData = evt.target.result.split(',')[1];
+        setFormData({...formData, resume:{
+          name: file.name,
+          type: file.type,
+          data: fileData,
+        }
+        });
+      }
+      reader.readAsDataURL(file); 
+      setResumeName(file.name);
     }
   };
   
@@ -62,6 +72,7 @@ const ApplicationForm = ({ initialRole }) => {
           resume: null,
           message: ''
         });
+        setResumeName('')
       } else {
         const error = await response.json();
         console.error('Error:', error.message); // Handle error

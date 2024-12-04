@@ -20,7 +20,7 @@ const readEmailTemplate = () => {
 
 // POST request handler
 export async function POST(req) {
-  const { firstName, lastName, mobileNumber, email, role, availability, message } = await req.json();
+  const { firstName, lastName, mobileNumber, email, role, availability, message, resume } = await req.json();
 
   // Validate input
   if (!firstName || !lastName || !mobileNumber || !email || !role) {
@@ -29,7 +29,7 @@ export async function POST(req) {
 
   // Create the transporter
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'Gmail',
     auth: {
       user: "darshilkantaria11@gmail.com", // Use your SMTP user
       pass: "qdjtqserppdybatc", // Use your SMTP password
@@ -49,6 +49,7 @@ export async function POST(req) {
       role,
       availability,
       message,
+      resume
     };
     const personalizedHtml = template(replacements);
 
@@ -57,9 +58,15 @@ export async function POST(req) {
       to: 'jgada402@gmail.com', // Replace with the owner's email address
       subject: 'New Job Application Received',
       html: personalizedHtml,
+      attachments: [
+        {
+          filename: resume.name,
+          content: Buffer.from(resume.data, 'base64'),
+          contentType: resume.type
+        }
+      ]
     };
 
-    // Send email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: 'Application sent successfully' }, { status: 200 });
