@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Offer from "../../../public/Ouroffer.svg"; // Assuming this contains your butterfly background
 import Tour from "../contact/book-a-tour"
+import Enquire from "../contact/enquireForm"
 
 export default function LandingPage() {
     // State to manage the active section
@@ -57,10 +58,10 @@ export default function LandingPage() {
                             </div>
                         )}
                         {activeSection === "Enquire" && (
-                            <p className="text-lg md:text-xl text-green-900">
+                            <div className="text-lg md:text-xl text-green-900">
                                 {/* Placeholder for the "Enquire" form */}
-                                Enquiry form will be displayed here.
-                            </p>
+                                <Enquire/>
+                            </div>
                         )}
                     </div>
                 </div>
