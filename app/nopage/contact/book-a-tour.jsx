@@ -11,16 +11,40 @@ const BookATourForm = () => {
     date: "",
     slot: "",
   });
+  const [availableSlots, setAvailableSlots] = useState([]);
+  const [isSubmitting, setIsSubmitting] = useState(false); // Track submission state
+  const [isBooked, setIsBooked] = useState(false); // Track booking success
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    if (name === "date") {
+      fetchSlots(value);
+    }
+  };
+
+  const fetchSlots = async (selectedDate) => {
+    try {
+      const response = await fetch(`/api/slots?date=${selectedDate}`);
+      const data = await response.json();
+      if (response.ok && data.slots) {
+        const availableSlots = Object.entries(data.slots)
+          .filter(([slot, isAvailable]) => isAvailable === true)
+          .map(([slot]) => slot);
+        setAvailableSlots(availableSlots);
+      } else {
+        setAvailableSlots([]);
+      }
+    } catch (error) {
+      console.error("Error fetching slots:", error);
+      setAvailableSlots([]);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate the form before submission
     if (
       !formData.parentName ||
       !formData.email ||
@@ -33,7 +57,8 @@ const BookATourForm = () => {
       return;
     }
 
-    // Send form data to the API endpoint
+    setIsSubmitting(true); // Disable button and show "Booking..."
+
     try {
       const response = await fetch("/api/bookATour", {
         method: "POST",
@@ -44,33 +69,31 @@ const BookATourForm = () => {
       });
 
       if (response.ok) {
-        const result = await response.json();
-        console.log(result.message); // Success message
-        alert("Tour booked successfully!");
-        // Reset form
-        setFormData({
-          parentName: "",
-          email: "",
-          mobileNumber: "",
-          numberOfPeople: "",
-          date: "",
-          slot: "",
-        });
+        setIsBooked(true); // Set booking success
       } else {
         const error = await response.json();
-        console.error("Error:", error.message);
-        alert("Failed to book tour. Please try again.");
+        alert(error.message || "Failed to book tour. Please try again.");
+        setIsSubmitting(false); // Re-enable button
       }
     } catch (error) {
       console.error("Failed to book tour:", error);
+      setIsSubmitting(false); // Re-enable button
     }
   };
+
+  if (isBooked) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+        <h2 className="text-4xl font-bold text-green-900 mb-4">Your Slot is Booked!</h2>
+        <p className="text-lg text-gray-600">Thank you for booking a tour with us. You will receive a confirmation email shortly.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 lv text-start">
       <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Book a Tour</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Grid for Name, Email, and Mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-lg font-medium text-gray-700 mb-2">Parent&apos;s Name *</label>
@@ -132,7 +155,6 @@ const BookATourForm = () => {
           </div>
         </div>
 
-        {/* Grid for Date and Slot */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-lg font-medium text-gray-700 mb-2">Date *</label>
@@ -157,21 +179,23 @@ const BookATourForm = () => {
               <option value="" disabled>
                 Select a slot..
               </option>
-              <option value="morning">Morning</option>
-              <option value="afternoon">Afternoon</option>
-              <option value="evening">Evening</option>
+              {availableSlots.map((slot, index) => (
+                <option key={index} value={slot}>
+                  {slot}
+                </option>
+              ))}
             </select>
           </div>
         </div>
 
-        {/* Submit Button */}
         <div className="text-center">
           <button
             type="submit"
-            className="bg-g1 text-white rounded-full p-1 font-semibold hover:bg-green-700"
+            className="bg-g1 text-white rounded-full p-1 font-semibold hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isSubmitting}
           >
             <p className="px-5 py-2 border-2 border-dashed border-white rounded-full">
-              Book Now
+              {isSubmitting ? "Booking..." : "Book Now"}
             </p>
           </button>
         </div>
