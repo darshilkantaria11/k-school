@@ -37,10 +37,10 @@ export default function LandingPage() {
                             <ul className="text-xs xl:text-lg space-y-2">
                                 <li><Link href="/why-us">Why us?</Link></li>
                                 <li><Link href="/services">Services</Link></li>
-                                <li><Link href="/programs">Programs</Link></li>
+                                <li><Link href="/program">Program</Link></li>
                                 <li><Link href="/about-us">About Us</Link></li>
-                                <li><Link href="/family-resources">Family Resources</Link></li>
-                                <li><Link href="/career">Career</Link></li>
+                                {/* <li><Link href="/family-resources">Family Resources</Link></li> */}
+                                <li><Link href="/careers">Careers</Link></li>
                             </ul>
                         </div>
                         <div className="flex flex-col justify-start h-full">

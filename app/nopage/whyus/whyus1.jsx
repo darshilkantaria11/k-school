@@ -9,7 +9,7 @@ export default function Page() {
             <Image
                 src={Whyus}
                 alt="about image"
-                className=""
+                className=" w-full"
 
             ></Image>
            

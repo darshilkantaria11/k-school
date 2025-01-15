@@ -7,9 +7,9 @@ export default function Home() {
             <div className="flex mt-20 container mx-auto justify-between flex-col lg:flex-row lv">
                 
                 <div className="flex flex-col lg:w-3/5 pl-10">
-                    <div className="text-g4 flex flex-col text-4xl sm:text-5xl  font-bold pb-4 justify-center lg:justify-start">
+                    <div className="text-g4 flex flex-col text-3xl md:text-4xl font-bold pb-4 justify-center lg:justify-start">
                         <h1>A Favourite Place For</h1>
-                      <h1 className=" text-2xl sm:text-6xl ">  Fun and Joy</h1>
+                      <h1 className=" text-xl sm:text-5xl ">  Fun and Joy</h1>
                     </div>
                     <div className="flex text-lg sm:text-xl text-justify pr-10">
                         <p>

@@ -11,7 +11,7 @@ export default function PhotoGallery() {
 
     return (
         <div className="py-10 px-5 container mx-auto">
-            <h2 className="text-g4 text-3xl xl:text-5xl font-bold p-4  mb-8">
+            <h2 className="text-g4 text-3xl md:text-4xl font-bold p-4  mb-8">
                 Our Fun Photo Gallery
             </h2>
             <div className="flex flex-col xl:flex-row">

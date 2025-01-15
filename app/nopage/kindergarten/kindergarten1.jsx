@@ -10,7 +10,7 @@ export default function Page() {
             <Image
                 src={Kindergarten}
                 alt="Toddler image"
-                className=""
+                className="w-full"
 
             ></Image>
              <div className="flex flex-col lv container mx-auto justify-center items-center mt-10 p-2">

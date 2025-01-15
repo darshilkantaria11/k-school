@@ -57,7 +57,7 @@ const Nav2 = () => {
                     Why Us?
                 </Link>
                 <div
-                    className="flex-grow flex items-center justify-center relative p-4"
+                    className="flex-grow flex items-center justify-center relative p-2"
                     onMouseEnter={handleMouseEnterServices}
                     onMouseLeave={handleMouseLeaveServices}
                 >
@@ -98,7 +98,7 @@ const Nav2 = () => {
             `}</style>
                 </div>
                 <div
-                    className="flex-grow flex items-center justify-center relative p-4"
+                    className="flex-grow flex items-center justify-center relative p-2"
                     onMouseEnter={handleMouseEnterProgram}
                     onMouseLeave={handleMouseLeaveProgram}
                 >

@@ -12,7 +12,7 @@ export default function Page() {
             <Image
                 src={Program}
                 alt="Program image"
-                className=""
+                className="w-full"
 
             ></Image>
             <div className="flex mt-20 container mx-auto justify-start items-start flex-col lg:flex-row lv">

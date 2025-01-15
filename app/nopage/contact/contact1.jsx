@@ -10,7 +10,7 @@ export default function Page() {
             <Image
                 src={Contact}
                 alt="Contact image"
-                className=""
+                className="w-full"
 
             ></Image>
 

@@ -16,7 +16,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-col lg:w-3/5 pl-10">
-                    <div className="text-g4 hidden lg:flex text-4xl sm:text-5xl font-bold pb-4 justify-center lg:justify-start">
+                    <div className="text-g4 hidden lg:flex text-3xl md:text-4xl font-bold pb-4 justify-center lg:justify-start">
                         <h1>What&apos;s Our Story?</h1>
                     </div>
                     <div className="flex text-lg sm:text-xl text-justify pr-10">

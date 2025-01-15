@@ -12,7 +12,7 @@ export default function Page() {
             <Image
                 src={Feild}
                 alt="Feild image"
-                className=""
+                className="w-full"
 
             ></Image>
             <div className="flex flex-col lv container mx-auto justify-center items-center mt-10 p-2">

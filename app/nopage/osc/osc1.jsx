@@ -9,7 +9,7 @@ export default function Page() {
             <Image
                 src={Osc}
                 alt="osc image"
-                className=""
+                className="w-full"
 
             ></Image>
 

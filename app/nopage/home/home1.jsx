@@ -51,7 +51,7 @@ export default function LandingPage() {
                         href="/about-us"
                         className="inline-block mt-6 p-1 bg-y1 text-yellow-900 font-semibold rounded-full hover:bg-yellow-500 transition"
                     >
-                        <p className='border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-3xl'>Read More</p>
+                        <p className='border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-2xl'>Read More</p>
                     </Link>
                 </div>
             </div>

@@ -9,7 +9,7 @@ export default function Page() {
             <Image
                 src={Food}
                 alt="Food image"
-                className=""
+                className="w-full"
 
             ></Image>
 

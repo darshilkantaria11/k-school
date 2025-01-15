@@ -37,8 +37,8 @@ export default function Navbar() {
                         <Image
                             src={Logo}// Replace with your logo path
                             alt="Logo"
-                            width={50} // Adjust the width as needed
-                            height={50} // Adjust the height as needed
+                            width={60} // Adjust the width as needed
+                            height={60} // Adjust the height as needed
                         />
                     </div>
                 </Link>
