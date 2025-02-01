@@ -95,7 +95,7 @@ const ApplicationForm = ({ initialRole }) => {
               name="firstName"
               value={formData.firstName}
               onChange={handleInputChange}
-              placeholder="enter your first name.."
+              placeholder="Enter your first name.."
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
@@ -107,7 +107,7 @@ const ApplicationForm = ({ initialRole }) => {
               name="lastName"
               value={formData.lastName}
               onChange={handleInputChange}
-              placeholder="enter your last name.."
+              placeholder="Enter your last name.."
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
@@ -122,7 +122,7 @@ const ApplicationForm = ({ initialRole }) => {
               name="mobileNumber"
               value={formData.mobileNumber}
               onChange={handleInputChange}
-              placeholder="enter your mobile number.."
+              placeholder="Enter your mobile number.."
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
@@ -134,7 +134,7 @@ const ApplicationForm = ({ initialRole }) => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              placeholder="enter your email.."
+              placeholder="Enter your email.."
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
             />
           </div>
@@ -164,7 +164,7 @@ const ApplicationForm = ({ initialRole }) => {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
           >
             <option value="" disabled>
-              please select availability...
+              Please select availability...
             </option>
             <option value="full-time">Full Time</option>
             <option value="part-time">Part Time</option>
@@ -185,7 +185,7 @@ const ApplicationForm = ({ initialRole }) => {
             {/* Custom placeholder */}
             <div className="flex flex-col md:flex-row">
               <div className={`w-full px-4 py-2 border border-gray-300 rounded-lg flex items-center justify-between ${resumeName ? 'bg-white' : 'bg-gray-100'}`}>
-                <span className={`text-gray-500 ${resumeName ? 'hidden' : ''}`}>please upload your resume</span>
+                <span className={`text-gray-500 ${resumeName ? 'hidden' : ''}`}>Please upload your resume</span>
                 <span className={`text-gray-700 font-medium ${resumeName ? '' : 'hidden'}`}>{resumeName}</span>
               </div>
               <button
@@ -206,7 +206,7 @@ const ApplicationForm = ({ initialRole }) => {
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            placeholder="enter your message.."
+            placeholder="Enter your message.."
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
             rows="5"
           />

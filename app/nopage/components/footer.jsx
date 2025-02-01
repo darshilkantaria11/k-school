@@ -7,7 +7,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function LandingPage() {
     return (
-        <div className="relative h-auto flex flex-col lv mt-10 md:mt-0">
+        <div className="relative h-auto flex flex-col lv mt-10  ">
             {/* Large screen layout */}
             <div className="hidden md:flex relative w-full h-auto">
                 <div className="w-full h-full">
@@ -50,10 +50,7 @@ export default function LandingPage() {
                                     <FaPhoneAlt className="mr-2 mt-1" /> {/* Phone icon */}
                                     <a href="tel:+15873640011">(587) 364 - 0011</a>
                                 </div>
-                                <div className="text-xs xl:text-lg py-2 flex flex-row">
-                                    <FaPhoneAlt className="mr-2 mt-1" /> {/* Phone icon */}
-                                    <a href="tel:+17804509817">(780) 450 - 9817</a>
-                                </div>
+                                
                                 <div className="text-xs xl:text-lg py-2 flex flex-row">
                                     <FaEnvelope className="mr-2 mt-1" /> {/* Phone icon */}
                                     <a href="mailto:knottin_schoolcare@live.com">knottin_schoolcare@live.com</a>
@@ -131,7 +128,7 @@ export default function LandingPage() {
                 </div>
             </div>
             <div className="flex absolute bottom-0 justify-center items-center w-full text-gray-400 py-4">
-                <h1>Copyright © 2024 Knottin. All Rights Reserved</h1>
+                <h1>Copyright © 2025 Knottin. All Rights Reserved</h1>
             </div>
         </div>
     );
