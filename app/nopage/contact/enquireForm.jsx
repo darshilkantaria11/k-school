@@ -102,42 +102,40 @@ const EnquireForm = () => {
             />
           </div>
           <div>
-          <label className="block text-lg font-medium text-gray-700 mb-2">
-            Mobile Number *
-          </label>
-          <input
-            type="text"
-            name="mobileNumber"
-            value={formData.mobileNumber}
-            onChange={handleInputChange}
-            placeholder="Enter mobile number"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-            required
-          />
-        </div>
-        </div>
-          <div>
-            <label className="block text-lg font-medium text-start text-gray-700 mb-2">
-              Email *
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Mobile Number *
             </label>
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              name="mobileNumber"
+              value={formData.mobileNumber}
               onChange={handleInputChange}
-              placeholder="Enter your email"
+              placeholder="Enter mobile number"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
           </div>
+        </div>
+        <div>
+          <label className="block text-lg font-medium text-start text-gray-700 mb-2">
+            Email *
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="Enter your email"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+            required
+          />
+        </div>
 
-       
-
-        <div className="bg-white p-2 border rounded-lg flex flex-col justify-center items-center">
+        <div>
           <label className="block text-lg font-medium text-gray-700 mb-2">
             Which Program Interested? *
           </label>
-          <div className="space-y-2">
+          <div className="space-y-2 bg-white p-2 border rounded-lg flex flex-col justify-center">
             <label className="flex items-center">
               <input
                 type="checkbox"

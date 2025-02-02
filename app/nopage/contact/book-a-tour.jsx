@@ -12,8 +12,8 @@ const BookATourForm = () => {
     slot: "",
   });
   const [availableSlots, setAvailableSlots] = useState([]);
-  const [isSubmitting, setIsSubmitting] = useState(false); // Track submission state
-  const [isBooked, setIsBooked] = useState(false); // Track booking success
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isBooked, setIsBooked] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -84,19 +84,30 @@ const BookATourForm = () => {
   if (isBooked) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <h2 className="text-4xl font-bold text-green-900 mb-4">Your Slot is Booked!</h2>
-        <p className="text-lg text-gray-600">Thank you for booking a tour with us. You will receive a confirmation email shortly.</p>
+        <h2 className="text-4xl font-bold text-green-900 mb-4">
+          Your Slot is Booked!
+        </h2>
+        <p className="text-lg text-gray-600">
+          Thank you for booking a tour with us. You will receive a confirmation
+          email shortly.
+        </p>
       </div>
     );
   }
 
+  const today = new Date().toISOString().split("T")[0];
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 lv text-start">
-      <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Book a Tour</h2>
+      <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">
+        Book a Tour
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Parent&apos;s Name *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Parent&apos;s Name *
+            </label>
             <input
               type="text"
               name="parentName"
@@ -108,7 +119,9 @@ const BookATourForm = () => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Email *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Email *
+            </label>
             <input
               type="email"
               name="email"
@@ -123,7 +136,9 @@ const BookATourForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Mobile Number *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Mobile Number *
+            </label>
             <input
               type="tel"
               name="mobileNumber"
@@ -135,7 +150,9 @@ const BookATourForm = () => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Number of People *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Number of People *
+            </label>
             <select
               name="numberOfPeople"
               value={formData.numberOfPeople}
@@ -157,18 +174,23 @@ const BookATourForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Date *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Date *
+            </label>
             <input
               type="date"
               name="date"
               value={formData.date}
               onChange={handleInputChange}
+              min={today}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
           </div>
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Slots *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Slots *
+            </label>
             <select
               name="slot"
               value={formData.slot}
@@ -179,11 +201,17 @@ const BookATourForm = () => {
               <option value="" disabled>
                 Select a slot..
               </option>
-              {availableSlots.map((slot, index) => (
-                <option key={index} value={slot}>
-                  {slot}
+              {availableSlots.length === 0 ? (
+                <option disabled>
+                  No slots for selected date available yet
                 </option>
-              ))}
+              ) : (
+                availableSlots.map((slot, index) => (
+                  <option key={index} value={slot}>
+                    {slot}
+                  </option>
+                ))
+              )}
             </select>
           </div>
         </div>
