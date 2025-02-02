@@ -12,8 +12,8 @@ const BookATourForm = () => {
     slot: "",
   });
   const [availableSlots, setAvailableSlots] = useState([]);
-  const [isSubmitting, setIsSubmitting] = useState(false); // Track submission state
-  const [isBooked, setIsBooked] = useState(false); // Track booking success
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isBooked, setIsBooked] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -57,10 +57,30 @@ const BookATourForm = () => {
       return;
     }
 
-    setIsSubmitting(true); // Disable button and show "Booking..."
+    setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/bookATour", {
+      // ✅ Step 1: Book the slot first
+      const slotResponse = await fetch("/api/bookAslot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          date: formData.date,
+          slot: formData.slot,
+        }),
+      });
+
+      if (!slotResponse.ok) {
+        const error = await slotResponse.json();
+        alert(error.message || "Slot booking failed. Please try again.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      // ✅ Step 2: If slot booking is successful, proceed to book the tour
+      const tourResponse = await fetch("/api/bookATour", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,16 +88,16 @@ const BookATourForm = () => {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setIsBooked(true); // Set booking success
+      if (tourResponse.ok) {
+        setIsBooked(true);
       } else {
-        const error = await response.json();
-        alert(error.message || "Failed to book tour. Please try again.");
-        setIsSubmitting(false); // Re-enable button
+        const error = await tourResponse.json();
+        alert(error.message || "Tour booking failed. Please try again.");
+        setIsSubmitting(false);
       }
     } catch (error) {
-      console.error("Failed to book tour:", error);
-      setIsSubmitting(false); // Re-enable button
+      console.error("Booking failed:", error);
+      setIsSubmitting(false);
     }
   };
 
@@ -85,13 +105,15 @@ const BookATourForm = () => {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
         <h2 className="text-4xl font-bold text-green-900 mb-4">Your Slot is Booked!</h2>
-        <p className="text-lg text-gray-600">Thank you for booking a tour with us. You will receive a confirmation email shortly.</p>
+        <p className="text-lg text-gray-600">
+          Thank you for booking a tour with us. You will receive a confirmation email shortly.
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 lv text-start">
+    <div className="max-w-4xl mx-auto px-4 py-12 text-start">
       <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Book a Tour</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
