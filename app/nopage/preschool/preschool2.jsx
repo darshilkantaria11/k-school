@@ -72,7 +72,7 @@ export default function LandingPage() {
                             </div>
                         </div>
                     </div>
-                    <div className="text-g4 flex text-xl sm:text-2xl font-bold pb-2 justify-center lg:justify-start text-center lg:text-start ">
+                    <div className="text-g4 my-4 flex text-xl sm:text-2xl font-bold pb-2 justify-center lg:justify-start text-center lg:text-start ">
                         <h1>Here are a few signs that your child is ready for our Preschool Program:</h1>
                     </div>
                     <ul className="flex flex-col text-lg sm:text-xl text-justify list-disc ">
@@ -87,7 +87,7 @@ export default function LandingPage() {
                 <div className="hidden lg:flex flex-col p-2 justify-center lg:justify-end hover:scale-105 transition-transform duration-200 ease-in-out ">
                     <div className="justify-center flex mb-4">
                         <div className=" p-2 rounded-xl">
-                            <Image src={Toddler} alt="Feild iamge" className="h-80 w-96" />
+                            <Image src={Toddler} alt="Feild iamge" className="h-100 w-100" />
                         </div>
                     </div>
                 </div>
