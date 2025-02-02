@@ -36,11 +36,11 @@ export default function LandingPage() {
                         <div>
                             <ul className="text-xs xl:text-lg space-y-2">
                                 <li><Link href="/why-us">Why us?</Link></li>
-                                <li><Link href="/services">Services</Link></li>
                                 <li><Link href="/program">Program</Link></li>
-                                <li><Link href="/about-us">About Us</Link></li>
                                 {/* <li><Link href="/family-resources">Family Resources</Link></li> */}
                                 <li><Link href="/careers">Careers</Link></li>
+                                <li><Link href="/about-us">About Us</Link></li>
+                                <li><Link href="/contact">Contact us</Link></li>
                             </ul>
                         </div>
                         <div className="flex flex-col justify-start h-full">
@@ -91,11 +91,12 @@ export default function LandingPage() {
                     <div className='text-center text-xl'>
                         <ul className="space-y-2">
                             <li><Link href="/why-us">Why us?</Link></li>
-                            <li><Link href="/services">Services</Link></li>
+                            {/* <li><Link href="/services">Services</Link></li> */}
                             <li><Link href="/programs">Programs</Link></li>
-                            <li><Link href="/about-us">About Us</Link></li>
-                            <li><Link href="/family-resources">Family Resources</Link></li>
+                            {/* <li><Link href="/family-resources">Family Resources</Link></li> */}
                             <li><Link href="/career">Career</Link></li>
+                            <li><Link href="/about-us">About Us</Link></li>
+                            <li><Link href="/contact">Contact</Link></li>
                         </ul>
                     </div>
                     <div className="w-full text-center text-xl">
@@ -107,11 +108,7 @@ export default function LandingPage() {
                             <a href="tel:+15873640011">(587) 364 - 0011</a>
                         </p>
 
-                        {/* Phone Number 2 */}
-                        <p className="text-base flex justify-center items-center">
-                            <FaPhoneAlt className="mr-2" /> {/* Phone icon */}
-                            <a href="tel:+17804509817">(780) 450 - 9817</a>
-                        </p>
+                       
 
                         {/* Email */}
                         <p className="text-base flex justify-center items-center">
