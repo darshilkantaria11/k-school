@@ -7,7 +7,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function LandingPage() {
     return (
-        <div className="relative h-auto flex flex-col lv mt-10 md:mt-0">
+        <div className="relative h-auto flex flex-col lv mt-10  ">
             {/* Large screen layout */}
             <div className="hidden md:flex relative w-full h-auto">
                 <div className="w-full h-full">
@@ -36,11 +36,11 @@ export default function LandingPage() {
                         <div>
                             <ul className="text-xs xl:text-lg space-y-2">
                                 <li><Link href="/why-us">Why us?</Link></li>
-                                <li><Link href="/services">Services</Link></li>
                                 <li><Link href="/program">Program</Link></li>
-                                <li><Link href="/about-us">About Us</Link></li>
                                 {/* <li><Link href="/family-resources">Family Resources</Link></li> */}
                                 <li><Link href="/careers">Careers</Link></li>
+                                <li><Link href="/about-us">About Us</Link></li>
+                                <li><Link href="/contact">Contact us</Link></li>
                             </ul>
                         </div>
                         <div className="flex flex-col justify-start h-full">
@@ -50,10 +50,7 @@ export default function LandingPage() {
                                     <FaPhoneAlt className="mr-2 mt-1" /> {/* Phone icon */}
                                     <a href="tel:+15873640011">(587) 364 - 0011</a>
                                 </div>
-                                <div className="text-xs xl:text-lg py-2 flex flex-row">
-                                    <FaPhoneAlt className="mr-2 mt-1" /> {/* Phone icon */}
-                                    <a href="tel:+17804509817">(780) 450 - 9817</a>
-                                </div>
+                                
                                 <div className="text-xs xl:text-lg py-2 flex flex-row">
                                     <FaEnvelope className="mr-2 mt-1" /> {/* Phone icon */}
                                     <a href="mailto:knottin_schoolcare@live.com">knottin_schoolcare@live.com</a>
@@ -94,11 +91,12 @@ export default function LandingPage() {
                     <div className='text-center text-xl'>
                         <ul className="space-y-2">
                             <li><Link href="/why-us">Why us?</Link></li>
-                            <li><Link href="/services">Services</Link></li>
+                            {/* <li><Link href="/services">Services</Link></li> */}
                             <li><Link href="/programs">Programs</Link></li>
-                            <li><Link href="/about-us">About Us</Link></li>
-                            <li><Link href="/family-resources">Family Resources</Link></li>
+                            {/* <li><Link href="/family-resources">Family Resources</Link></li> */}
                             <li><Link href="/career">Career</Link></li>
+                            <li><Link href="/about-us">About Us</Link></li>
+                            <li><Link href="/contact">Contact</Link></li>
                         </ul>
                     </div>
                     <div className="w-full text-center text-xl">
@@ -110,11 +108,7 @@ export default function LandingPage() {
                             <a href="tel:+15873640011">(587) 364 - 0011</a>
                         </p>
 
-                        {/* Phone Number 2 */}
-                        <p className="text-base flex justify-center items-center">
-                            <FaPhoneAlt className="mr-2" /> {/* Phone icon */}
-                            <a href="tel:+17804509817">(780) 450 - 9817</a>
-                        </p>
+                       
 
                         {/* Email */}
                         <p className="text-base flex justify-center items-center">
@@ -131,7 +125,7 @@ export default function LandingPage() {
                 </div>
             </div>
             <div className="flex absolute bottom-0 justify-center items-center w-full text-gray-400 py-4">
-                <h1>Copyright © 2024 Knottin. All Rights Reserved</h1>
+                <h1>Copyright © 2025 Knottin. All Rights Reserved</h1>
             </div>
         </div>
     );

@@ -57,8 +57,8 @@ export default function LandingPage() {
 
                 {/* Text Section */}
                 <div className="absolute top-0 left-0 flex flex-col md:flex-row h-full items-center justify-around px-6 xl:px-20 pt-4 w-full text-white space-y-10 md:space-y-0">
-                    <div className="flex flex-col">
-                        <h1 className='xl:text-5xl md:text-3xl text-sm md:mb-4 italic'>Watching my toddler build confidence through play has been amazing. The caring teachers have made all the difference.</h1>
+                    <div className="flex flex-col text-justify">
+                        <h1 className='xl:text-4xl md:text-2xl text-sm md:mb-4 italic'>Watching my toddler build confidence through play has been amazing. The caring teachers have made all the difference.</h1>
                         <p className='xl:text-xl md:text-lg text-xs'>— Parent</p>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default function LandingPage() {
 
             <div className="flex mb-8  container mx-auto justify-center flex-col lg:flex-row lv">
                 <div className="flex flex-col justify-center p-4">
-                    <div className="text-g4 flex text-4xl sm:text-5xl font-bold pb-4 justify-center lg:justify-start text-center lg:text-start ">
+                    <div className="text-g4 mb-4 flex text-4xl sm:text-5xl font-bold pb-4 justify-center lg:justify-start text-center lg:text-start ">
                         <h1>Daily Rhythm</h1>
                     </div>
                     <div className="flex lg:hidden flex-col p-2 justify-center lg:justify-end hover:scale-105 transition-transform duration-200 ease-in-out lg:w-2/5">

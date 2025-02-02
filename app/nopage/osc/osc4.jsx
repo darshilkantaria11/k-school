@@ -35,7 +35,7 @@ export default function LandingPage() {
     return (
         <div className="relative flex flex-col mt-10 lv">
             {/* Background Image */}
-            <div className="relative w-full h-auto flex justify-center items-center rounded-xl py-6 md:py-10">
+            <div className="relative w-full h-max flex justify-center items-center rounded-xl py-6 md:py-10">
                 <Image
                     src={Offer}
                     alt="Background Image"

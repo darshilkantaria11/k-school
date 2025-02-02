@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import A from '../../../public/o1.svg'; // Import the SVG frame
+import A from '../../../public/o1a.svg'; // Import the SVG frame
 import B from '../../../public/o2.svg';
 import C from '../../../public/o3.svg';
 import D from '../../../public/o4.svg';

@@ -8,7 +8,7 @@ export default function LandingPage() {
     return (
         <>
 
-            <div className="container mx-auto relative h-auto flex flex-col mt-12 lv">
+            <div className="container mx-auto relative h-auto flex justify-center items-center text-justify flex-col mt-12 lv">
                 {/* Background Image for large screens */}
                 <div className="flex relative w-full h-auto">
                     <Image
@@ -25,7 +25,7 @@ export default function LandingPage() {
                 {/* Text Section */}
                 <div className="absolute top-0 left-0 flex flex-col md:flex-row h-full items-center justify-around px-6 xl:px-20 pt-4 w-full text-white space-y-10 md:space-y-0">
                     <div className="flex flex-col">
-                        <h1 className='xl:text-5xl md:text-3xl text-sm md:mb-4 italic'>The greatest gifts you can give your children are the roots of responsibility and the wings of independence.</h1>
+                        <h1 className='xl:text-4xl md:text-2xl text-sm md:mb-4 italic'>The greatest gifts you can give your children are the roots of responsibility and the wings of independence.</h1>
                         <p className='xl:text-xl md:text-lg text-xs'>— Denis Waitley</p>
                     </div>
                 </div>
