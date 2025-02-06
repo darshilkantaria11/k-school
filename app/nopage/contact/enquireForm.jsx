@@ -102,75 +102,75 @@ const EnquireForm = () => {
             />
           </div>
           <div>
-          <label className="block text-lg font-medium text-gray-700 mb-2">
-            Mobile Number *
-          </label>
-          <input
-            type="text"
-            name="mobileNumber"
-            value={formData.mobileNumber}
-            onChange={handleInputChange}
-            placeholder="Enter mobile number"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-            required
-          />
-        </div>
-        </div>
-          <div>
-            <label className="block text-lg font-medium text-start text-gray-700 mb-2">
-              Email *
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Mobile Number *
             </label>
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              name="mobileNumber"
+              value={formData.mobileNumber}
               onChange={handleInputChange}
-              placeholder="Enter your email"
+              placeholder="Enter mobile number"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
           </div>
-
-       
-
-        <div className="bg-white p-2 border rounded-lg flex flex-col justify-center items-center">
-          <label className="block text-lg font-medium text-gray-700 mb-2">
-            Which Program Interested? *
+        </div>
+        <div>
+          <label className="block text-lg font-medium text-start text-gray-700 mb-2">
+            Email *
           </label>
-          <div className="space-y-2">
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                name="toddler"
-                checked={formData.programs.toddler}
-                onChange={handleCheckboxChange}
-                className="mr-2"
-              />
-              Toddler
-            </label>
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                name="preschool"
-                checked={formData.programs.preschool}
-                onChange={handleCheckboxChange}
-                className="mr-2"
-              />
-              Preschool
-            </label>
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                name="kindergarten"
-                checked={formData.programs.kindergarten}
-                onChange={handleCheckboxChange}
-                className="mr-2"
-              />
-              Kindergarten
-            </label>
-          </div>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="Enter your email"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+            required
+          />
         </div>
 
+
+        <div>
+          <label className=" text-lg font-medium text-gray-700 ">
+            Which Program Interested? *
+          </label>
+          <div className="bg-white p-2 border rounded-lg flex flex-col mt-2">
+            <div className="space-y-2">
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  name="toddler"
+                  checked={formData.programs.toddler}
+                  onChange={handleCheckboxChange}
+                  className="mr-2"
+                />
+                Toddler
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  name="preschool"
+                  checked={formData.programs.preschool}
+                  onChange={handleCheckboxChange}
+                  className="mr-2"
+                />
+                Preschool
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  name="kindergarten"
+                  checked={formData.programs.kindergarten}
+                  onChange={handleCheckboxChange}
+                  className="mr-2"
+                />
+                Kindergarten
+              </label>
+            </div>
+          </div>
+        </div>
         <div>
           <label className="block text-lg font-medium text-gray-700 mb-2">
             Message (What are your Queries?) *
