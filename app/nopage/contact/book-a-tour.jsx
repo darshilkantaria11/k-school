@@ -192,7 +192,9 @@ const BookATourForm = () => {
           </div>
           
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Slots *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Slots *
+            </label>
             <select
               name="slot"
               value={formData.slot}
@@ -203,11 +205,17 @@ const BookATourForm = () => {
               <option value="" disabled>
                 Select a slot..
               </option>
-              {availableSlots.map((slot, index) => (
-                <option key={index} value={slot}>
-                  {slot}
+              {availableSlots.length === 0 ? (
+                <option disabled>
+                  No slots for selected date available yet
                 </option>
-              ))}
+              ) : (
+                availableSlots.map((slot, index) => (
+                  <option key={index} value={slot}>
+                    {slot}
+                  </option>
+                ))
+              )}
             </select>
           </div>
         </div>
