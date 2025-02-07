@@ -10,7 +10,7 @@ export async function GET(req) {
         const url = new URL(req.url);
         const dateParam = url.searchParams.get('date');
 
-        console.log('Received date parameter:', dateParam); // Log the received date parameter
+        console.log('Received date parameter:', dateParam);
 
         if (!dateParam) {
             return NextResponse.json({ error: "Date parameter is required" }, { status: 400 });
@@ -30,17 +30,24 @@ export async function GET(req) {
 
         // Find slots for the selected date
         const slotsForDate = await Slot.findOne({
-            date: formattedDate // Use formatted date (YYYY-MM-DDT00:00:00.000Z)
+            date: formattedDate
         });
 
-        console.log('Fetched slots for the selected date:', slotsForDate); // Log the fetched data
+        console.log('Fetched slots for the selected date:', slotsForDate);
 
         if (!slotsForDate) {
             return NextResponse.json({ slots: [] }); // Return empty array if no slots are found
         }
 
-        // Return the slots for the selected date
-        return NextResponse.json({ slots: slotsForDate.slots });
+        // Ensure slots are returned in the correct order
+        const sortedSlots = {
+            "10am-11am": slotsForDate.slots["10am-11am"] ?? false,
+            "11am-12pm": slotsForDate.slots["11am-12pm"] ?? false,
+            "12pm-1pm": slotsForDate.slots["12pm-1pm"] ?? false,
+            "1pm-2pm": slotsForDate.slots["1pm-2pm"] ?? false,
+        };
+
+        return NextResponse.json({ slots: sortedSlots });
     } catch (error) {
         console.error('Error fetching slots:', error.message);
         return NextResponse.json({ error: error.message }, { status: 500 });
