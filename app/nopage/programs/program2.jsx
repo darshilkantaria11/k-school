@@ -24,13 +24,18 @@ export default function ProgramCard() {
                     </div>
 
                     <div className="mt-8 flex justify-center">
-                        <Link
-                            href="/contact"
+                        <a
+                            href="https://drive.google.com/file/d/1abTR-wCDk_elJyx0evGADX2Tg1T8yRja/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block p-1 bg-y1 text-yellow-900 font-semibold rounded-full hover:bg-yellow-500 transition"
                         >
-                            <p className='border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-3xl'>Get Admission Form</p>
-                        </Link>
+                            <p className='border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-3xl'>
+                                Get Admission Form
+                            </p>
+                        </a>
                     </div>
+
                 </div>
             </div>
 
