@@ -25,9 +25,9 @@ export default function LandingPage() {
                 {/* Content on top of the background */}
                 <div className="relative z-10 text-center max-w-4xl mx-auto md:p-4 p-2 flex flex-col w-full">
                     {/* Button Group */}
-                    <div className="flex justify-center items-center mt-6">
+                    {/* <div className="flex justify-center items-center mt-6">
                         <div className="flex border-2 border-dashed border-g1 gap-4 rounded-full bg-white px-4 py-2">
-                            {/* Book a Tour Button */}
+                           
                             <button
                                 onClick={() => setActiveSection("Book a Tour")}
                                 className={`text-g1 md:px-4 px-1 py-2 rounded-full focus:outline-none transition duration-300 ${
@@ -37,7 +37,7 @@ export default function LandingPage() {
                                 Book a Tour
                             </button>
 
-                            {/* Enquire Button */}
+                           
                             <button
                                 onClick={() => setActiveSection("Enquire")}
                                 className={`text-g1 md:px-4 px-1 py-2 rounded-full focus:outline-none transition duration-300 ${
@@ -47,22 +47,26 @@ export default function LandingPage() {
                                 Enquire
                             </button>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Section Content */}
                     <div className="mt-8 text-center w-full">
-                        {activeSection === "Book a Tour" && (
+                        {/* {activeSection === "Book a Tour" && (
                             <div className="text-lg md:text-xl text-green-900">
-                                {/* Placeholder for the "Book a Tour" form */}
+                                
                                 <Tour/>
                             </div>
                         )}
                         {activeSection === "Enquire" && (
                             <div className="text-lg md:text-xl text-green-900">
+                              
+                                <Enquire/>
+                            </div>
+                        )} */}
+                         <div className="text-lg md:text-xl text-green-900">
                                 {/* Placeholder for the "Enquire" form */}
                                 <Enquire/>
                             </div>
-                        )}
                     </div>
                 </div>
             </div>

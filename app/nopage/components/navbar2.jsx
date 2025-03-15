@@ -46,7 +46,7 @@ export default function Navbar() {
                 {/* Right side: Book a Tour button */}
                 <div className='flex flex-row'>
                     <Link href="/contact" className="bg-g1 text-white px-6 py-2 rounded-full">
-                        Book a Tour
+                        Enquire Now
                     </Link>
                     <div className="md:hidden  flex items-center justify-start px-1 rounded-full " aria-label="Mobile Navigation">
                         <GiHamburgerMenu onClick={toggleHamburger} className='h-10 w-10 px-1 text-g4' />
