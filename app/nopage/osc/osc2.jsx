@@ -10,7 +10,7 @@ export default function DayAtPreschool() {
     return (
         <>
         <div className="flex mt-20 mb-10 justify-center items-center text-3xl md:text-6xl lv">
-            <h1 className='text-center text-g4'>A Day at Our Preschool</h1>
+            <h1 className='text-center text-g4'>Transportation Policy</h1>
         </div>
             <div className="container mx-auto grid grid-cols-2 gap-4 lg:gap-8">
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
