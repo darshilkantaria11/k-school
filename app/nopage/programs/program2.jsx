@@ -39,14 +39,14 @@ export default function ProgramCard() {
                 </div>
             </div>
 
-            <div className="max-w-2xl mx-auto lv">
+            {/* <div className="max-w-2xl mx-auto lv">
                 <h2 className="text-center text-2xl font-bold text-green-900 my-6">
                     Answers to Your Preschool Questions
                 </h2>
                 {accordionData.map((item, index) => (
                     <Accordion key={index} title={item.title} content={item.content} />
                 ))}
-            </div>
+            </div> */}
 
         </>
     );
