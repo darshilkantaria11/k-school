@@ -122,13 +122,13 @@ export default function LandingPage() {
                     <div className="text-lg md:text-lg text-g4 font-normal mb-6">
                         <p><strong>Medication Storage & Handling:</strong> All medications and herbal remedies must be in their original container and handed directly to a staff member by the primary caregiver.</p>
                         <p>Children are not allowed to carry medications in their bags or backpacks.</p>
-                        <p>Medications and herbal remedies will be tagged and securely stored in a locked facility, out of children's reach.</p>
+                        <p>Medications and herbal remedies will be tagged and securely stored in a locked facility, out of children&apos;s reach.</p>
 
                         <p><strong>Carrying Daily Medications:</strong> If a child requires daily medications (e.g., inhalers, epi-pens), their backpack will be tagged with their name.</p>
                         <p>Tagged backpacks will be stored at the front of the van for safety.</p>
                         <p>Children are not permitted to self-medicate.</p>
 
-                        <p><strong>Confiscation & Disposal:</strong> Any medications or herbal remedies found in a child's backpack, lunch bag, or pockets will be confiscated and returned to the parent/guardian at the end of the day.</p>
+                        <p><strong>Confiscation & Disposal:</strong> Any medications or herbal remedies found in a child&apos;s backpack, lunch bag, or pockets will be confiscated and returned to the parent/guardian at the end of the day.</p>
                         <p>Unmarked medications (e.g., a loose pill in a baggie) will be immediately destroyed and disposed of.</p>
 
                         <p><strong>Consent Form Requirement:</strong> To allow our staff to administer medication, please print and complete the appropriate form and bring it to the program.</p>
