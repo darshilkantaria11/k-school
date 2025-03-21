@@ -66,6 +66,18 @@ export default function RootLayout({ children }) {
         <meta name="geo.position" content="50.7252;-113.9753" />
         <meta name="ICBM" content="50.7252, -113.9753" />
 
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E57CDEKGNW"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E57CDEKGNW');
+          `,
+        }} />
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
