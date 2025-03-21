@@ -38,7 +38,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Knottin Daycare Centre - Best Preschool in Okotoks",
     description: "Providing high-quality early education in Okotoks, Canada. Safe, nurturing, and fun environment for children.",
-    images: ["https://knottindaycarecentre.com/Logo.svg"],
+    images: ["https://knottindaycarecentre.com/Logo.png"],
   },
   icons: {
     icon: "/favicon.ico",
