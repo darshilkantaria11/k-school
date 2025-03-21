@@ -32,14 +32,7 @@ export const metadata = {
     url: "https://knottindaycarecentre.com",
     siteName: "Knottin Daycare Centre",
     locale: "en_CA",
-    images: [
-      {
-        url: "https://knottindaycarecentre.com/Logo.svg",
-        width: 1200,
-        height: 630,
-        alt: "Knottin Daycare Centre - Preschool in Okotoks",
-      },
-    ],
+    images: ['https://www.knottindaycarecentre.com/Logo.svg'],
   },
   twitter: {
     card: "summary_large_image",
