@@ -99,7 +99,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen lv`}>
         <Navbar1 />
         <Navbar2 />
         <main className="flex-1">{children}</main>
