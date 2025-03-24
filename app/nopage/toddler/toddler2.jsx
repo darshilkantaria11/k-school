@@ -67,13 +67,13 @@ export default function LandingPage() {
 
             <div className="flex mb-8  container mx-auto justify-center flex-col lg:flex-row lv">
                 <div className="flex flex-col justify-center p-4">
-                    <div className="text-g4 mb-4 flex text-4xl sm:text-5xl font-bold pb-4 justify-center lg:justify-start text-center lg:text-start ">
+                    <div className="text-g4 md:mb-4 flex text-4xl sm:text-5xl font-bold md:pb-4 justify-center lg:justify-start text-center lg:text-start ">
                         <h1>Daily Rhythm</h1>
                     </div>
                     <div className="flex lg:hidden flex-col p-2 justify-center lg:justify-end hover:scale-105 transition-transform duration-200 ease-in-out lg:w-2/5">
                         <div className="justify-center flex mb-4">
                             <div className=" p-2 rounded-xl">
-                                <Image src={Toddler} alt="food image" className="h-80 w-96" />
+                                <Image src={Toddler} alt="food image" className="h-auto w-96" />
                             </div>
                         </div>
                     </div>

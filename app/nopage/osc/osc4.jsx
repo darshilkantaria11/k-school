@@ -96,30 +96,23 @@ export default function LandingPage() {
                 </div>
             </div>
 
-            <div className="relative w-full h-auto flex justify-center items-center rounded-xl py-6 md:py-10 mt-10">
-                <Image
-                    src={Transport}  // Replace with relevant image
-                    alt="Medication Policy Image"
-                    layout="fill"
-                    objectFit="cover"
-                    priority
-                    className="absolute w-full h-full rounded-3xl"
-                />
+            <div className="  w-full h-auto flex justify-center items-center rounded-xl py-6 md:py-10 mt-10">
+              
 
                 {/* Content on top of the background */}
-                <div className="relative z-10 md:p-4 p-2 flex flex-col container mx-auto">
+                <div className=" z-10 md:p-4 p-2 flex flex-col container mx-auto bg-g1 rounded-2xl">
                     {/* Title */}
-                    <h2 className="text-3xl md:text-4xl font-bold text-g4 text-center mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                         Medication Administration Policy
                     </h2>
 
                     {/* Description */}
-                    <p className="text-lg md:text-xl text-g4 font-semibold mb-6">
+                    <p className="text-lg md:text-xl text-white font-semibold mb-6">
                         At Knottin School OSCC, medication and herbal remedies will only be administered by staff with written consent from a parent/guardian. Please review the following guidelines carefully:
                     </p>
 
                     {/* Policy Details */}
-                    <div className="text-lg md:text-lg text-g4 font-normal mb-6">
+                    <div className="text-lg md:text-lg text-white font-normal mb-6">
                         <p><strong>Medication Storage & Handling:</strong> All medications and herbal remedies must be in their original container and handed directly to a staff member by the primary caregiver.</p>
                         <p>Children are not allowed to carry medications in their bags or backpacks.</p>
                         <p>Medications and herbal remedies will be tagged and securely stored in a locked facility, out of children&apos;s reach.</p>

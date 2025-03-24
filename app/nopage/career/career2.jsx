@@ -54,29 +54,32 @@ export default function JobOffers() {
     return (
         <>
             <div className="flex flex-col items-center py-10 space-y-6 p-2 lv">
-                <div className="w-full max-w-4xl">
-                    {loading ? (
-                        <p className="text-center">Loading jobs...</p>
-                    ) : error ? (
-                        <p className="text-red-500">{error}</p>
-                    ) : (
-                        jobs.map((job) => (
-                            <div
-                                key={job._id}
-                                className={`flex flex-col md:flex-row border-r-2 border-b-2 rounded-md justify-between border-g1 bg-t1 p-6 shadow-md mb-4 cursor-pointer`}
-                                onClick={() => openJobModal(job)}
-                            >
-                                <div className="flex flex-col">
-                                    <h3 className="text-g4 font-bold">{job.positionName}</h3>
-                                    <p className="text-gray-600">{job.shortDescription}</p>
-                                </div>
-                                <div className="text-g4 text-center items-center pt-2 justify-center flex">
-                                    <p>{job.positionType === 'Full-time' ? 'Full Time' : 'Part Time'} &gt;</p>
-                                </div>
-                            </div>
-                        ))
-                    )}
+            <div className="w-full max-w-4xl">
+    {loading ? (
+        <p className="text-center">Loading jobs...</p>
+    ) : error ? (
+        <p className="text-red-500">{error}</p>
+    ) : jobs.length === 0 ? (
+        <p className="text-center text-gray-500">No position available at this moment</p>
+    ) : (
+        jobs.map((job) => (
+            <div
+                key={job._id}
+                className="flex flex-col md:flex-row border-r-2 border-b-2 rounded-md justify-between border-g1 bg-t1 p-6 shadow-md mb-4 cursor-pointer"
+                onClick={() => openJobModal(job)}
+            >
+                <div className="flex flex-col">
+                    <h3 className="text-g4 font-bold">{job.positionName}</h3>
+                    <p className="text-gray-600">{job.shortDescription}</p>
                 </div>
+                <div className="text-g4 text-center items-center pt-2 justify-center flex">
+                    <p>{job.positionType === 'Full-time' ? 'Full Time' : 'Part Time'} &gt;</p>
+                </div>
+            </div>
+        ))
+    )}
+</div>
+
 
                 {selectedJob && (
                     <div
