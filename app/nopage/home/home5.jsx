@@ -17,37 +17,37 @@ export default function DayAtPreschool() {
                     <Image
                     src={A}
                     alt='play time'
-                    ></Image>
+                    unoptimized></Image>
                 </div>
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
                     <Image
                     src={B}
                     alt='outdoor time'
-                    ></Image>
+                    unoptimized></Image>
                 </div>
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
                     <Image
                     src={C}
                     alt='circle time'
-                    ></Image>
+                    unoptimized ></Image>
                 </div>
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
                     <Image
                     src={D}
                     alt='quite time'
-                    ></Image>
+                    unoptimized ></Image>
                 </div>
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
                     <Image
                     src={E}
                     alt='snack time'
-                    ></Image>
+                    unoptimized ></Image>
                 </div>
                 <div className=" hover:scale-105 transition-transform duration-200 ease-in-out">
                     <Image
                     src={F}
                     alt='lunch time'
-                    ></Image>
+                    unoptimized ></Image>
                 </div>
                 
                

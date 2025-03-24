@@ -18,7 +18,7 @@ const geistMono = localFont({
 export const metadata = {
   title: "Knottin Daycare Centre - Best Preschool in Okotoks, Canada",
   description: "Knottin Daycare Centre in Okotoks, Canada, provides a safe and nurturing environment for early childhood education. Enroll your child today!",
-  keywords: "preschool in Okotoks, daycare in Okotoks, Knottin Daycare Centre, early childhood education, Canada daycare",
+  keywords: "preschool in Okotoks, daycare in Okotoks, Knottin Daycare Centre, early childhood education, Canada daycare, Knottin Daycare Centre in Okotoks",
   authors: [{ name: "Knottin Daycare Centre", url: "https://knottindaycarecentre.com" }],
   applicationName: "Knottin Daycare Centre",
   viewport: "width=device-width, initial-scale=1",
