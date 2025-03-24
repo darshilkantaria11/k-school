@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Landing from "../../../public/landing.png";
-import Landing2 from "../../../public/landing1.svg";
+import Landing2 from "../../../public/landing3.png";
 import Link from 'next/link';
 
 export default function LandingPage() {
