@@ -14,10 +14,10 @@ export default function DayAtPreschool() {
         </div>
             <div className="container mx-auto grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
-                    <Image
+                    <img
                     src={A}
                     alt='play time'
-                    unoptimized></Image>
+                    />
                 </div>
                 <div className="hover:scale-105 transition-transform duration-200 ease-in-out ">
                     <Image
