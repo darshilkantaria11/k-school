@@ -64,7 +64,7 @@ export default function Navbar() {
                         </li>
                         <li>
                             <div className="flex justify-between">
-                                <p  className="text-black  hover:text-h1 px-3 py-2 rounded-md text-md font-medium focus:outline-none" title="Residential Painting Services">
+                                <p  className="text-black   px-3 py-2 rounded-md text-md font-medium focus:outline-none" title="Residential Painting Services">
                                     Services
                                 </p>
                                 <button
@@ -97,7 +97,7 @@ export default function Navbar() {
                         <li>
                             <div className="flex justify-between">
                                 <Link onClick={toggleHamburger} href="/program" className="text-black  hover:text-h1 px-3 py-2 rounded-md text-md font-medium focus:outline-none" title="Program">
-                                    Program
+                                    Programs
                                 </Link>
                                 <button
                                     onClick={toggleDropdown2}

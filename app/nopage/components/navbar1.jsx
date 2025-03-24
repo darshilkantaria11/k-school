@@ -61,7 +61,7 @@ const Nav2 = () => {
                     onMouseEnter={handleMouseEnterServices}
                     onMouseLeave={handleMouseLeaveServices}
                 >
-                    <p className="hover:text-h1 ">
+                    <p className=" ">
                         Services
                     </p>
                     {isServicesHovered && (
@@ -103,7 +103,7 @@ const Nav2 = () => {
                     onMouseLeave={handleMouseLeaveProgram}
                 >
                     <Link href="/program" title="Program" className="hover:text-h1 ">
-                        Program
+                        Programs
                     </Link>
                     {isProgramHovered && (
                         <div
