@@ -83,7 +83,7 @@ const EnquireForm = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 text-start">
       <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">
-        Enquire Form
+        Enquiry Form
       </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
