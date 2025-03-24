@@ -9,7 +9,7 @@ import Toddler from "../../../public/toddler1.svg"
 export default function LandingPage() {
     return (
         <>
-            <div className="relative flex flex-col mt-10 mb-20 lv">
+            <div className="relative flex flex-col mt-10 mb-8 lv">
                 {/* Background Image for large screens */}
                 <div className="relative w-full h-auto flex justify-center items-center  rounded-xl py-6 md:py-10">
                     <Image
