@@ -27,7 +27,7 @@ export default function Page() {
         <meta property="og:url" content="https://knottindaycarecentre.com/field-trip" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Knottin Daycare Centre" />
-        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.png" />
         <meta property="og:locale" content="en_CA" />
 
         {/* Twitter Meta */}
@@ -37,7 +37,7 @@ export default function Page() {
           name="twitter:description"
           content="Knottin Daycare Centre offers exciting and educational field trips in Okotoks, Canada. Explore the world with us!"
         />
-        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.png" />
       </Head>
 
       <Feild1 />

@@ -28,7 +28,7 @@ export default function Page() {
         <meta property="og:url" content="https://knottindaycarecentre.com/program/toddler" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Knottin Daycare Centre" />
-        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.png" />
         <meta property="og:locale" content="en_CA" />
 
         {/* Twitter Meta */}
@@ -38,7 +38,7 @@ export default function Page() {
           name="twitter:description"
           content="Explore the best toddler care and early learning programs at Knottin Daycare Centre, Okotoks, Canada."
         />
-        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.png" />
       </Head>
 
       <Toddler1 />

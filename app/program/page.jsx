@@ -29,7 +29,7 @@ export default function Page() {
         <meta property="og:url" content="https://knottindaycarecentre.com/programs" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Knottin Daycare Centre" />
-        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.png" />
         <meta property="og:locale" content="en_CA" />
 
         {/* Twitter Meta */}
@@ -39,7 +39,7 @@ export default function Page() {
           name="twitter:description"
           content="Learn more about our daycare and preschool programs in Okotoks, Alberta."
         />
-        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.png" />
       </Head>
 
       <Program1 />

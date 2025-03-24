@@ -29,7 +29,7 @@ export default function Page() {
         <meta property="og:url" content="https://knottindaycarecentre.com/careers" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Knottin Daycare Centre" />
-        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta property="og:image" content="https://knottindaycarecentre.com/Logo.png" />
         <meta property="og:locale" content="en_CA" />
 
         {/* Twitter Meta */}
@@ -39,7 +39,7 @@ export default function Page() {
           name="twitter:description"
           content="Knottin Daycare Centre is hiring! Apply today for childcare and preschool teaching positions in Okotoks."
         />
-        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.svg" />
+        <meta name="twitter:image" content="https://knottindaycarecentre.com/Logo.png" />
       </Head>
 
       <Career1 />

@@ -32,7 +32,7 @@ export const metadata = {
     url: "https://knottindaycarecentre.com",
     siteName: "Knottin Daycare Centre",
     locale: "en_CA",
-    images: ['https://www.knottindaycarecentre.com/Logo.png'],
+    images: 'https://www.knottindaycarecentre.com/Logo.png',
   },
   twitter: {
     card: "summary_large_image",
