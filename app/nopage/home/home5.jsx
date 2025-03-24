@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import A from '../../../public/h5a.png'; // Import the SVG frame
-import B from '../../../public/h5b.svg';
-import C from '../../../public/h5c.svg';
-import D from '../../../public/h5d.svg';
-import E from '../../../public/h5e.svg';
-import F from '../../../public/h5f.svg';
+import A from '../../../public/h5a.png'; // Import the png frame
+import B from '../../../public/h5b.png';
+import C from '../../../public/h5c.png';
+import D from '../../../public/h5d.png';
+import E from '../../../public/h5e.png';
+import F from '../../../public/h5f.png';
 
 export default function DayAtPreschool() {
     return (
