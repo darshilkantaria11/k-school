@@ -51,7 +51,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: 'darshilkantaria11@gmail.com',
-      to: 'jgada402@gmail.com', // Replace with the recipient email
+      to: 'knottindaycarecentre@gmail.com', // Replace with the recipient email
       subject: 'New Enquiry Received',
       html: personalizedHtml,
     };
