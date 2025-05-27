@@ -84,8 +84,8 @@ export default function Navbar() {
                                         <Link onClick={toggleHamburger}href="/food-services" className="block px-4 py-2 text-md text-white  hover:text-h1 " role="menuitem"  title=" Food Services">
                                         Food Services
                                         </Link>
-                                        <Link onClick={toggleHamburger} href="/feild-trips" className="block px-4 py-2 text-md text-white  hover:text-h1" role="menuitem" title=" Feild trips">
-                                        Feild trips
+                                        <Link onClick={toggleHamburger} href="/field-trips" className="block px-4 py-2 text-md text-white  hover:text-h1" role="menuitem" title=" field trips">
+                                        Field trips
                                         </Link>
                                         <Link onClick={toggleHamburger} href="/osc" className="block px-4 py-2 text-md text-white  hover:text-h1" role="menuitem" title="Out Of School Care">
                                         OSC
