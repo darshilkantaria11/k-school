@@ -54,8 +54,8 @@ export async function POST(req) {
     const personalizedHtml = template(replacements);
 
     const mailOptions = {
-      from: 'darshilkantaria11@gmail.com', // Sender address
-      to: 'jgada402@gmail.com', // Replace with the owner's email address
+      from: `"Knottin Website" <${process.env.EMAIL}>`, // Sender address
+      to: 'knottin_schoolcare@live.com', // Replace with the owner's email address
       subject: 'New Job Application Received',
       html: personalizedHtml,
       attachments: [

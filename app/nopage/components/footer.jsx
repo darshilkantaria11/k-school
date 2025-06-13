@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link'; // Import Link from next/link
 import Footer from '../../../public/Footer.svg'; // For large screens
 import Footers from '../../../public/Footers.svg'; // For small screens
-import Logo from "../../../public/Footerlogo.svg";
+import Logo from "../../../public/Logo.svg";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function LandingPage() {
@@ -25,8 +25,9 @@ export default function LandingPage() {
                         <Image
                             src={Logo}
                             alt='footer logo'
-                            className=' w-44 h-auto xl:w-72'
+                            className=' w-24 h-auto xl:w-44'
                         />
+                        <h2 className='text-3xl lg:text-6xl'>Knottin school day care centre</h2>
                         <p className="mt-4 text-xs xl:text-lg">
                             Come visit Knottin Day Care Centre for a tour and meet our dedicated educators.
                             Experience our high-quality early education first-hand.
@@ -50,7 +51,7 @@ export default function LandingPage() {
                                     <FaPhoneAlt className="mr-2 mt-1" /> {/* Phone icon */}
                                     <a href="tel:+15873640011">(587) 364 - 0011</a>
                                 </div>
-                                
+
                                 <div className="text-xs xl:text-lg py-2 flex flex-row">
                                     <FaEnvelope className="mr-2 mt-1" /> {/* Phone icon */}
                                     <a href="mailto:knottin_schoolcare@live.com">knottin_schoolcare@live.com</a>
@@ -77,12 +78,20 @@ export default function LandingPage() {
                     priority
                 />
                 <div className="absolute inset-0 flex flex-col justify-around items-center text-white px-4 py-6 space-y-4">
-                    <div className="flex flex-row justify-center items-center">
-                        <Image
-                            src={Logo}
-                            alt='footer logo'
-                            className='h-32 w-44 xl:h-68 xl:w-80'
-                        />
+                    <div className="flex flex-col justify-start items-start">
+                        <div className='flex flex-row w-full justify-center items-center'>
+                            <div>
+                                <Image
+                                    src={Logo}
+                                    alt='footer logo'
+                                    className='h-32 w-44 xl:h-68 xl:w-80'
+                                />
+                            </div>
+                            <div>
+
+                                <h2 className='text-3xl lg:text-6xl'>Knottin school day care centre</h2>
+                            </div>
+                        </div>
                         <p className="mt-4 text-sm">
                             Come visit Knottin Day Care Centre for a tour and meet our dedicated educators.
                             Experience our high-quality early education first-hand.
@@ -108,7 +117,7 @@ export default function LandingPage() {
                             <a href="tel:+15873640011">(587) 364 - 0011</a>
                         </p>
 
-                       
+
 
                         {/* Email */}
                         <p className="text-base flex justify-center items-center">
