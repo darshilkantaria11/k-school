@@ -29,8 +29,8 @@ export async function POST(req) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'darshilkantaria11@gmail.com', // Replace with your email
-      pass: 'qdjtqserppdybatc', // Replace with your app password
+      user: process.env.EMAIL, 
+      pass: process.env.PASSWORD, 
     },
   });
 
@@ -50,8 +50,8 @@ export async function POST(req) {
     const personalizedHtml = template(replacements);
 
     const mailOptions = {
-      from: 'darshilkantaria11@gmail.com',
-      to: 'jgada402@gmail.com', // Replace with the recipient email
+      from: `"Knottin Website" <${process.env.EMAIL}>`,
+      to: 'knottin_schoolcare@live.com', // Replace with the recipient email
       subject: 'New Enquiry Received',
       html: personalizedHtml,
     };

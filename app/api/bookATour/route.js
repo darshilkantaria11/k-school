@@ -29,8 +29,8 @@ export async function POST(req) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "darshilkantaria11@gmail.com", // Use your SMTP user
-      pass: "qdjtqserppdybatc", // Use your SMTP password
+      user: "@gmail.com", // Use your SMTP user
+      pass: "", // Use your SMTP password
     },
   });
 
@@ -51,8 +51,8 @@ export async function POST(req) {
     const personalizedHtml = template(replacements);
 
     const mailOptions = {
-      from: 'darshilkantaria11@gmail.com', // Sender address
-      to: 'jgada402@gmail.com', // Replace with the owner's email address
+      from: '', // Sender address
+      to: '', // Replace with the owner's email address
       subject: 'New Tour Booking Received',
       html: personalizedHtml,
     };

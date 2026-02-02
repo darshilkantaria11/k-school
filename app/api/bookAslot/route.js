@@ -28,6 +28,12 @@ export async function POST(req) {
 
         // Mark the slot as booked (false)
         slotDocument.slots[slot] = false;
+
+        // Add the booked slot to the 'bookedSlots' array
+        if (!slotDocument.bookedSlots.includes(slot)) {
+            slotDocument.bookedSlots.push(slot);
+        }
+
         await slotDocument.save();
 
         return NextResponse.json({ message: "Slot booked successfully" }, { status: 200 });

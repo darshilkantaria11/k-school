@@ -7,18 +7,18 @@ export default function LandingPage() {
         <>
             <div className="relative h-full flex flex-col mt-10 lv mb-10">
                 {/* Background Image for large screens */}
-                <div className="relative w-full h-auto flex justify-center items-center  rounded-xl py-6 md:py-10">
+                <div className="relative w-full h-auto flex justify-center items-center rounded-xl py-6 md:py-10">
                     <Image
                         src={Transport}
                         alt="Transport Image"
                         layout="fill"
                         objectFit="cover"
                         priority
-                        className="absolute  w-full h-full rounded-3xl"
+                        className="absolute w-full h-full rounded-3xl"
                     />
 
                     {/* Content on top of the background */}
-                    <div className="relative z-10  md:p-4 p-2 flex flex-col container mx-auto">
+                    <div className="relative z-10 md:p-4 p-2 flex flex-col container mx-auto">
                         {/* Title */}
                         <h2 className="text-3xl md:text-4xl font-bold text-g4 text-center mb-4">
                             Transportation Rules
@@ -30,7 +30,7 @@ export default function LandingPage() {
                         </p>
 
                         {/* Transportation Rules */}
-                        <div className="text-lg md:text-lg text-g4 font-normal">
+                        <div className="text-lg md:text-lg text-g4 font-normal mb-6">
                             <p>1. After the driver has brought the van/bus to a complete stop, students should enter and leave the bus single file in a quiet and orderly manner.</p>
                             <p>2. Students should never throw anything inside or outside the van/bus.</p>
                             <p>3. Students should take a seat immediately and stay seated.</p>
@@ -40,8 +40,23 @@ export default function LandingPage() {
                             <p>7. Students should not open windows without the driver&apos;s permission.</p>
                             <p>8. Students should not tamper with the safety devices on the bus or van or destroy or deface any portion of the vehicle.</p>
                         </div>
+
+                        {/* PDF Download Button */}
+                        <div className="flex justify-center">
+                            <a
+                                href="https://drive.google.com/file/d/1s94owmx_t6L2mkX0ezAqmcxRI77O17kQ/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block p-1 bg-y1 text-yellow-900 font-semibold rounded-full hover:bg-yellow-500 transition"
+                            >
+                                <p className="border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-3xl">
+                                    View Transportation Rules PDF
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
 

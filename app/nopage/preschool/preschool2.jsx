@@ -9,7 +9,7 @@ import Toddler from "../../../public/toddler1.svg"
 export default function LandingPage() {
     return (
         <>
-            <div className="relative flex flex-col mt-10 mb-20 lv">
+            <div className="relative flex flex-col mt-10 mb-8 lv">
                 {/* Background Image for large screens */}
                 <div className="relative w-full h-auto flex justify-center items-center  rounded-xl py-6 md:py-10">
                     <Image
@@ -68,7 +68,7 @@ export default function LandingPage() {
                     <div className="flex lg:hidden flex-col p-2 justify-center lg:justify-end hover:scale-105 transition-transform duration-200 ease-in-out lg:w-2/5">
                         <div className="justify-center flex mb-4">
                             <div className=" p-2 rounded-xl">
-                                <Image src={Toddler} alt="food image" className="h-80 w-96" />
+                                <Image src={Toddler} alt="food image" className="h-auto w-96" />
                             </div>
                         </div>
                     </div>

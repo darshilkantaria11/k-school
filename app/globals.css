@@ -13,3 +13,11 @@
 .lv {
   font-family: 'YourFont', sans-serif;
 }
+
+.svg-sharp {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  transform: translateZ(0);
+}

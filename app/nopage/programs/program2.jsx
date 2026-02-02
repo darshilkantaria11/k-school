@@ -24,24 +24,29 @@ export default function ProgramCard() {
                     </div>
 
                     <div className="mt-8 flex justify-center">
-                        <Link
-                            href="/contact"
+                        <a
+                            href="https://drive.google.com/file/d/1abTR-wCDk_elJyx0evGADX2Tg1T8yRja/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block p-1 bg-y1 text-yellow-900 font-semibold rounded-full hover:bg-yellow-500 transition"
                         >
-                            <p className='border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-3xl'>Get Admission Form</p>
-                        </Link>
+                            <p className='border-dashed border-2 border-yellow-700 xl:px-4 xl:py-2 px-2 py-1 rounded-full text-sm xl:text-3xl'>
+                                Get Admission Form
+                            </p>
+                        </a>
                     </div>
+
                 </div>
             </div>
 
-            <div className="max-w-2xl mx-auto lv">
+            {/* <div className="max-w-2xl mx-auto lv">
                 <h2 className="text-center text-2xl font-bold text-green-900 my-6">
                     Answers to Your Preschool Questions
                 </h2>
                 {accordionData.map((item, index) => (
                     <Accordion key={index} title={item.title} content={item.content} />
                 ))}
-            </div>
+            </div> */}
 
         </>
     );

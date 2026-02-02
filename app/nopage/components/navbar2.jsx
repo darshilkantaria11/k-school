@@ -46,7 +46,7 @@ export default function Navbar() {
                 {/* Right side: Book a Tour button */}
                 <div className='flex flex-row'>
                     <Link href="/contact" className="bg-g1 text-white px-6 py-2 rounded-full">
-                        Book a Tour
+                        Enquire Now
                     </Link>
                     <div className="md:hidden  flex items-center justify-start px-1 rounded-full " aria-label="Mobile Navigation">
                         <GiHamburgerMenu onClick={toggleHamburger} className='h-10 w-10 px-1 text-g4' />
@@ -64,7 +64,7 @@ export default function Navbar() {
                         </li>
                         <li>
                             <div className="flex justify-between">
-                                <p  className="text-black  hover:text-h1 px-3 py-2 rounded-md text-md font-medium focus:outline-none" title="Residential Painting Services">
+                                <p  className="text-black   px-3 py-2 rounded-md text-md font-medium focus:outline-none" title="Residential Painting Services">
                                     Services
                                 </p>
                                 <button
@@ -84,8 +84,8 @@ export default function Navbar() {
                                         <Link onClick={toggleHamburger}href="/food-services" className="block px-4 py-2 text-md text-white  hover:text-h1 " role="menuitem"  title=" Food Services">
                                         Food Services
                                         </Link>
-                                        <Link onClick={toggleHamburger} href="/feild-trips" className="block px-4 py-2 text-md text-white  hover:text-h1" role="menuitem" title=" Feild trips">
-                                        Feild trips
+                                        <Link onClick={toggleHamburger} href="/field-trips" className="block px-4 py-2 text-md text-white  hover:text-h1" role="menuitem" title=" field trips">
+                                        Field trips
                                         </Link>
                                         <Link onClick={toggleHamburger} href="/osc" className="block px-4 py-2 text-md text-white  hover:text-h1" role="menuitem" title="Out Of School Care">
                                         OSC
@@ -97,7 +97,7 @@ export default function Navbar() {
                         <li>
                             <div className="flex justify-between">
                                 <Link onClick={toggleHamburger} href="/program" className="text-black  hover:text-h1 px-3 py-2 rounded-md text-md font-medium focus:outline-none" title="Program">
-                                    Program
+                                    Programs
                                 </Link>
                                 <button
                                     onClick={toggleDropdown2}

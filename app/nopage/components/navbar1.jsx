@@ -61,7 +61,7 @@ const Nav2 = () => {
                     onMouseEnter={handleMouseEnterServices}
                     onMouseLeave={handleMouseLeaveServices}
                 >
-                    <p className="hover:text-h1 ">
+                    <p className=" ">
                         Services
                     </p>
                     {isServicesHovered && (
@@ -74,8 +74,8 @@ const Nav2 = () => {
                                 <Link href="/food-services" className="block p-2 hover:bg-g3 hover:text-black" title=" Food Services">
                                     Food Services
                                 </Link>
-                                <Link href="/feild-trips" className="block p-2 hover:bg-g3 hover:text-black" title=" Feild trips">
-                                   Feild trips
+                                <Link href="/field-trips" className="block p-2 hover:bg-g3 hover:text-black" title=" field trips">
+                                   Field trips
                                 </Link>
                                 <Link href="/osc" className="block p-2 hover:bg-g3 hover:text-black" title="Out Of School Care">
                                     OSC
@@ -103,7 +103,7 @@ const Nav2 = () => {
                     onMouseLeave={handleMouseLeaveProgram}
                 >
                     <Link href="/program" title="Program" className="hover:text-h1 ">
-                        Program
+                        Programs
                     </Link>
                     {isProgramHovered && (
                         <div
