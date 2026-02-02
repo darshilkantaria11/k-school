@@ -14,8 +14,6 @@ const BookATourForm = () => {
   const [availableSlots, setAvailableSlots] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isBooked, setIsBooked] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isBooked, setIsBooked] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
