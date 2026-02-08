@@ -13,6 +13,7 @@ const EnquireForm = () => {
       kindergarten: false,
     },
     message: "",
+    website: "",
   });
 
   const [successMessage, setSuccessMessage] = useState(""); // To show success message
@@ -30,10 +31,63 @@ const EnquireForm = () => {
     });
   };
 
+  const isValidEmail = (email) => {
+    const invalidPatterns = [
+      /^0+@/i,
+      /^test@/i,
+      /^admin@/i,
+      /^info@/i,
+      /^demo@/i,
+    ];
+
+    if (invalidPatterns.some((p) => p.test(email))) return false;
+    if (email.split("@")[0].length < 3) return false;
+
+    return true;
+  };
+
+  const isValidMobile = (mobile) => {
+    const cleaned = mobile.replace(/\D/g, "");
+    if (!/^[6-9]\d{9}$/.test(cleaned)) return false;
+    if (/^(\d)\1{9}$/.test(cleaned)) return false;
+    return true;
+  };
+
+  const isValidMessage = (msg) => {
+    const trimmed = msg.trim().toLowerCase();
+    const banned = ["hi", "hello", "ok", "okay", "test"];
+
+    if (banned.includes(trimmed)) return false;
+
+    return true;
+  };
+
+  const isValidParentName = (name) => {
+    const trimmed = name.trim().toLowerCase();
+
+    if (!/^[a-z\s]+$/.test(trimmed)) return false;
+
+    const banned = [
+      "test",
+      "testing",
+      "abc",
+      "asdf",
+      "qwerty",
+      "admin",
+      "demo",
+      "user",
+      "name",
+    ];
+    if (banned.includes(trimmed)) return false;
+
+    if (/^(.)\1+$/.test(trimmed.replace(/\s/g, ""))) return false;
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare data for submission
     const selectedPrograms = Object.keys(formData.programs).filter(
       (program) => formData.programs[program],
     );
@@ -49,6 +103,26 @@ const EnquireForm = () => {
       return;
     }
 
+    if (!isValidEmail(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (!isValidMobile(formData.mobileNumber)) {
+      alert("Please enter a valid mobile number.");
+      return;
+    }
+
+    if (!isValidMessage(formData.message)) {
+      alert("Please describe your query in a little more detail.");
+      return;
+    }
+
+    if (!isValidParentName(formData.parentName)) {
+      alert("Please enter a valid full name.");
+      return;
+    }
+
     try {
       const response = await fetch("/api/enquire", {
         method: "POST",
@@ -58,25 +132,30 @@ const EnquireForm = () => {
         body: JSON.stringify({ ...formData, selectedPrograms }),
       });
 
-      if (response.ok) {
-        setSuccessMessage("Our Team will reach out to you soon!");
-        setFormData({
-          parentName: "",
-          email: "",
-          mobileNumber: "",
-          programs: {
-            toddler: false,
-            preschool: false,
-            kindergarten: false,
-          },
-          message: "",
-        });
-      } else {
-        const error = await response.json();
-        alert("Error: " + error.message);
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.log("Yeah Yeah");
+        alert(result.error || "Something went wrong.");
+        return;
       }
+
+      setSuccessMessage("Our Team will reach out to you soon!");
+      setFormData({
+        parentName: "",
+        email: "",
+        mobileNumber: "",
+        programs: {
+          toddler: false,
+          preschool: false,
+          kindergarten: false,
+        },
+        message: "",
+        website: "",
+      });
     } catch (error) {
       console.error("Error sending enquiry:", error);
+      alert("Unable to submit enquiry. Please try again later.");
     }
   };
 
@@ -96,7 +175,7 @@ const EnquireForm = () => {
               name="parentName"
               value={formData.parentName}
               onChange={handleInputChange}
-              placeholder="Enter parent's name"
+              placeholder="e.g. Charles Delott"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
@@ -110,7 +189,7 @@ const EnquireForm = () => {
               name="mobileNumber"
               value={formData.mobileNumber}
               onChange={handleInputChange}
-              placeholder="Enter mobile number"
+              placeholder="e.g. 647 555 0199"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
               required
             />
@@ -125,21 +204,7 @@ const EnquireForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="Enter your email"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-lg font-medium text-start text-gray-700 mb-2">
-            Email *
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Enter your email"
+            placeholder="e.g. johndoe@gmail.com"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
             required
           />
@@ -192,12 +257,21 @@ const EnquireForm = () => {
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            placeholder="Enter your message"
+            placeholder="Please mention your child’s age and your main query"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
             rows="5"
             required
           />
         </div>
+        <input
+          type="text"
+          name="website"
+          value={formData.website || ""}
+          onChange={handleInputChange}
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+        />
 
         <div className="text-center">
           <button
