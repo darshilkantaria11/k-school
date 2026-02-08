@@ -131,8 +131,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `"Knottin Website" <${process.env.EMAIL}>`,
-      // to: "knottin_schoolcare@live.com",
-      to: "pajpanideep@gmail.com",
+      to: "knottin_schoolcare@live.com",
       subject: "New Enquiry Received",
       html: personalizedHtml,
     };
