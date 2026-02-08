@@ -47,6 +47,7 @@ export default function Page() {
       <About2 />
       <About3 />
       <About4 />
+      
     </>
   );
 }
