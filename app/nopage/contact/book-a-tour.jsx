@@ -104,21 +104,27 @@ const BookATourForm = () => {
   if (isBooked) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <h2 className="text-4xl font-bold text-green-900 mb-4">Your Slot is Booked!</h2>
+        <h2 className="text-4xl font-bold text-green-900 mb-4">
+          Your Slot is Booked!
+        </h2>
         <p className="text-lg text-gray-600">
-          Thank you for booking a tour with us. You will receive a confirmation email shortly.
+          Thank you for booking a tour with us. You will receive a confirmation
+          email shortly.
         </p>
       </div>
     );
   }
-  const today = new Date().toISOString().split("T")[0];
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 text-start">
-      <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Book a Tour</h2>
+    <div className="max-w-4xl mx-auto px-4 py-12 lv text-start">
+      <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">
+        Book a Tour
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Parent&apos;s Name *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Parent&apos;s Name *
+            </label>
             <input
               type="text"
               name="parentName"
@@ -130,7 +136,9 @@ const BookATourForm = () => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Email *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Email *
+            </label>
             <input
               type="email"
               name="email"
@@ -145,7 +153,9 @@ const BookATourForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Mobile Number *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Mobile Number *
+            </label>
             <input
               type="tel"
               name="mobileNumber"
@@ -157,7 +167,9 @@ const BookATourForm = () => {
             />
           </div>
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Number of People *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Number of People *
+            </label>
             <select
               name="numberOfPeople"
               value={formData.numberOfPeople}
@@ -179,7 +191,9 @@ const BookATourForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-lg font-medium text-gray-700 mb-2">Date *</label>
+            <label className="block text-lg font-medium text-gray-700 mb-2">
+              Date *
+            </label>
             <input
               type="date"
               name="date"
@@ -190,7 +204,7 @@ const BookATourForm = () => {
               required
             />
           </div>
-          
+
           <div>
             <label className="block text-lg font-medium text-gray-700 mb-2">
               Slots *
